@@ -1,0 +1,51 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Full-Stack App (Student Build)</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="logo">Full-Stack App</div>
+            <div class="nav-user">
+                <button id="userDropdownBtn">Admin ▼</button>
+                <div class="dropdown-content" id="myDropdown">
+                    <a href="#">Profile</a>
+                    <a href="#" id="logoutBtn">Logout</a>
+                </div>
+            </div>
+        </nav>
+
+       <section id="hero" class="hero-card">
+    <h1>Welcome to Full-Stack App</h1>
+    <p>A static prototype before backend integration. Simulates:</p>
+    <ul class="features">
+        <li>Email registration + fake verification</li>
+        <li>Login with JWT-like token simulation</li>
+        <li>Role-based UI (Admin/User)</li>
+        <li>CRUD for Employees, Departments, Requests</li>
+    </ul>
+    <div class="info-banner">
+        ⚠️ <strong>Note:</strong> All data is stored in <code>localStorage</code>. Refresh to reset.
+    </div>
+    <button class="btn-primary">Get Started →</button>
+</section>
+            
+
+        <div id="deptModal" class="modal">
+            <div class="modal-content">
+                <h3>Add New Department</h3>
+                <input type="text" id="deptName" placeholder="Department Name">
+                <input type="text" id="deptDesc" placeholder="Description">
+                <div class="modal-buttons">
+                    <button class="btn-primary" onclick="addDepartment()">Save</button>
+                    <button class="btn-cancel" onclick="toggleModal('deptModal')">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+    </html>
